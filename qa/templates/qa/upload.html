@@ -1,0 +1,10 @@
+<h2>Upload a Document</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+</form>
+{% if text %}
+<h3>Extracted Text (preview)</h3>
+<pre>{{ text|truncatechars:1000 }}</pre>
+{% endif %}
