@@ -148,5 +148,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Aniket Kumar Singh**
 B.Tech CSE (AI & ML) — JSS Academy of Technical Education
-[GitHub](https://github.com/aniket25042005) • [LinkedIn](#)
-=======
+[GitHub](https://github.com/aniket25042005) • [LinkedIn](https://www.linkedin.com/in/aniket-kumar-singh-70941a277/)
