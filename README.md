@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 📄 DocQA — RAG-Based Document Q&A Assistant
 
 A web application that lets you upload a PDF and ask natural-language questions about it, receiving accurate, **source-grounded** answers instead of hallucinated ones. Built with a Retrieval-Augmented Generation (RAG) pipeline from scratch — no black-box frameworks, just a transparent, understandable implementation.
