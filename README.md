@@ -151,5 +151,3 @@ This project is open source and available under the [MIT License](LICENSE).
 B.Tech CSE (AI & ML) — JSS Academy of Technical Education
 [GitHub](https://github.com/aniket25042005) • [LinkedIn](#)
 =======
-
->>>>>>> 299b1bdd2cbd199f3416f18b3102217c455b0ee3
