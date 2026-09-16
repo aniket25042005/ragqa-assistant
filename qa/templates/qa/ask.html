@@ -1,0 +1,28 @@
+{% extends "qa/base.html" %}
+{% block title %}Ask a Question{% endblock %}
+{% block content %}
+    <h2>Ask about: <span class="doc-name">{{ document.file.name|slice:"10:" }}</span></h2>
+    <p class="subtitle">Ask anything — answers are grounded in the document content.</p>
+
+    <form method="post" action="{% url 'ask_question' document.id %}">
+        {% csrf_token %}
+        <div class="ask-row">
+            <input type="text" name="query" placeholder="e.g. What is environmental pollution?" required>
+            <button type="submit">Ask</button>
+        </div>
+    </form>
+
+    {% if answer %}
+    <div class="answer-box">
+        <h3>Answer</h3>
+        <p>{{ answer }}</p>
+    </div>
+
+    <div class="sources">
+        <h4>Source excerpts used</h4>
+        {% for chunk in source_chunks %}
+        <blockquote>{{ chunk|truncatechars:280 }}</blockquote>
+        {% endfor %}
+    </div>
+    {% endif %}
+{% endblock %}

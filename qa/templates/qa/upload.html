@@ -1,10 +1,17 @@
-<h2>Upload a Document</h2>
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Upload</button>
-</form>
-{% if text %}
-<h3>Extracted Text (preview)</h3>
-<pre>{{ text|truncatechars:1000 }}</pre>
-{% endif %}
+{% extends "qa/base.html" %}
+{% block title %}Upload a Document{% endblock %}
+{% block content %}
+    <h1>Ask questions about any document</h1>
+    <p class="subtitle">Upload a PDF and get instant, source-grounded answers.</p>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% if form.document.errors %}
+            <ul class="errorlist">{{ form.document.errors }}</ul>
+        {% endif %}
+        <div class="field-group">
+            {{ form.document }}
+        </div>
+        <button type="submit">Upload &amp; Continue →</button>
+    </form>
+{% endblock %}
